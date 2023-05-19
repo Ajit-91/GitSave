@@ -1,7 +1,10 @@
 import express, {Express, Request, Response, json, urlencoded } from 'express'
+import dotenv from 'dotenv';
 import errorHandler from './middlewares/errorhandler'
 import cors from 'cors'
 import ghRoutes from './routes/ghRoutes'
+
+dotenv.config();
 
 
 const app : Express = express()

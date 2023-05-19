@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post("/", ghControllers.addRepoData);
 
-router.get("/:id",)
+router.get("/:id", ghControllers.getRepoData);
 
 export default router;
