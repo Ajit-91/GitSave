@@ -34,4 +34,14 @@ DB_PORT=(Port || 5432)
   npm run dev
 ```
 
+## Routes
+1. - Method: POST,
+    - Route :-  /github
+    - Payload: <br/>{ url: "https://api.github.com/users/{{contributor’s username}}/repos }
+
+<br/>
+2. - Method: GET
+    - Route:- /github/:id
+
+
     
