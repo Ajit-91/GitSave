@@ -50,7 +50,7 @@ export const addRepoData: RequestHandler = catchError(async (req, res, next) => 
 export const getRepoData: RequestHandler = catchError(async (req, res, next) => {
     // fetch data from postgresql database
     const data = await pool.query(`SELECT * FROM repos WHERE id = $1`, [req.params.id])
-    console.log({ data })
+    
     if(data.rows.length === 0) throw new AppError(404, "No data found")
     
     const finalData : Repo = {
@@ -75,3 +75,4 @@ export const getRepoData: RequestHandler = catchError(async (req, res, next) => 
         data: finalData
     })
 })
+

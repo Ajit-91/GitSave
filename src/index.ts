@@ -1,15 +1,12 @@
 import express, {Express, Request, Response, json, urlencoded } from 'express'
-import dotenv from 'dotenv';
 import errorHandler from './middlewares/errorhandler'
 import cors from 'cors'
 import ghRoutes from './routes/ghRoutes'
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-
 const app : Express = express()
-
-// connecting to postgres database
 
 const PORT : number= 8000
 
