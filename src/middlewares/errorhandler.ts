@@ -14,10 +14,6 @@ const errorHandler : ErrorRequestHandler = (err: AppError | Error, req: Request,
     statusCode = err.statusCode;
     message = err.message;
   } 
-//   else if (err.name === "ValidationError") {
-//     statusCode = 400;
-//     message = Object.values(err.errors).map((val: any) => val.message).join(', ');
-//   } 
   else {
     statusCode = 500;
     message = "Internal Server Error";
